@@ -42,10 +42,9 @@ const Login = () => {
                         console.log(data)
                         //local storage token set
                         localStorage.setItem('token', data.token);
+                        navigate(from, { replace: true });
                     })
 
-
-                // navigate(from, { replace: true });
             })
             .then(error => console.log(error));
     }
